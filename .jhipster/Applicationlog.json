@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "application_no",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "action",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "action_by",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "action_date",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20190725063011",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "applicationlog",
+    "databaseType": "cassandra",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

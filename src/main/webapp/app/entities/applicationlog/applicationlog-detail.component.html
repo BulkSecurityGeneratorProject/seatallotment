@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="applicationlog">
+            <h2><span jhiTranslate="seatAllotmentApp.applicationlog.detail.title">Applicationlog</span> {{applicationlog.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="seatAllotmentApp.applicationlog.application_no">Application No</span></dt>
+                <dd>
+                    <span>{{applicationlog.application_no}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.applicationlog.action">Action</span></dt>
+                <dd>
+                    <span>{{applicationlog.action}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.applicationlog.action_by">Action By</span></dt>
+                <dd>
+                    <span>{{applicationlog.action_by}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.applicationlog.action_date">Action Date</span></dt>
+                <dd>
+                    <span>{{applicationlog.action_date}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/applicationlog', applicationlog.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

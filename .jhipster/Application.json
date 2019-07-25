@@ -1,0 +1,79 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "application_no",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicant_name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicant_email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicant_mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicant_dob",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "applicant_address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "course",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "institute",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "speciality",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "course_doc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "first_preference",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "second_preference",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "third_preference",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entryby",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entry_date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190725062801",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "application",
+    "databaseType": "cassandra",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

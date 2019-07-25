@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "district",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "vacant",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "occupied",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20190725062046",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "seat_partition",
+    "databaseType": "cassandra",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
