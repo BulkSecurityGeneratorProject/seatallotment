@@ -39,6 +39,8 @@ public class UserDTO {
 
     private Set<String> authorities;
 
+    private String mobileNumber;
+
     public UserDTO() {
         // Empty constructor needed for Jackson.
     }
@@ -129,5 +131,13 @@ public class UserDTO {
             ", langKey='" + langKey + '\'' +
             ", authorities=" + authorities +
             "}";
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 }
