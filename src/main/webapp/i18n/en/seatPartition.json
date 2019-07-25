@@ -1,0 +1,25 @@
+{
+  "seatAllotmentApp": {
+    "seatPartition": {
+      "home": {
+        "title": "Seat Partitions",
+        "createLabel": "Create a new Seat Partition",
+        "createOrEditLabel": "Create or edit a Seat Partition",
+        "notFound": "No Seat Partition found"
+      },
+      "created": "A new Seat Partition is created with identifier {{ param }}",
+      "updated": "A Seat Partition is updated with identifier {{ param }}",
+      "deleted": "A Seat Partition is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Seat Partition {{ id }}?"
+      },
+      "detail": {
+        "title": "Seat Partition"
+      },
+      "district": "District",
+      "total": "Total",
+      "vacant": "Vacant",
+      "occupied": "Occupied"
+    }
+  }
+}

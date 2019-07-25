@@ -1,0 +1,25 @@
+{
+  "seatAllotmentApp": {
+    "applicationLog": {
+      "home": {
+        "title": "Application Logs",
+        "createLabel": "Create a new Application Log",
+        "createOrEditLabel": "Create or edit a Application Log",
+        "notFound": "No Application Log found"
+      },
+      "created": "A new Application Log is created with identifier {{ param }}",
+      "updated": "A Application Log is updated with identifier {{ param }}",
+      "deleted": "A Application Log is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Application Log {{ id }}?"
+      },
+      "detail": {
+        "title": "Application Log"
+      },
+      "application_no": "Application No",
+      "action": "Action",
+      "action_by": "Action By",
+      "action_date": "Action Date"
+    }
+  }
+}

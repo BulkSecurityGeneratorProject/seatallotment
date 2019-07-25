@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="seatPartition">
+            <h2><span jhiTranslate="seatAllotmentApp.seatPartition.detail.title">Seat Partition</span> {{seatPartition.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="seatAllotmentApp.seatPartition.district">District</span></dt>
+                <dd>
+                    <span>{{seatPartition.district}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.seatPartition.total">Total</span></dt>
+                <dd>
+                    <span>{{seatPartition.total}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.seatPartition.vacant">Vacant</span></dt>
+                <dd>
+                    <span>{{seatPartition.vacant}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.seatPartition.occupied">Occupied</span></dt>
+                <dd>
+                    <span>{{seatPartition.occupied}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/seat-partition', seatPartition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
