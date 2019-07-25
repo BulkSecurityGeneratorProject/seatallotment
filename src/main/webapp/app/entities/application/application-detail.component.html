@@ -1,0 +1,87 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="application">
+            <h2><span jhiTranslate="seatAllotmentApp.application.detail.title">Application</span> {{application.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="seatAllotmentApp.application.application_no">Application No</span></dt>
+                <dd>
+                    <span>{{application.application_no}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.applicant_name">Applicant Name</span></dt>
+                <dd>
+                    <span>{{application.applicant_name}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.applicant_email">Applicant Email</span></dt>
+                <dd>
+                    <span>{{application.applicant_email}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.applicant_mobile">Applicant Mobile</span></dt>
+                <dd>
+                    <span>{{application.applicant_mobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.applicant_dob">Applicant Dob</span></dt>
+                <dd>
+                    <span>{{application.applicant_dob}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.applicant_address">Applicant Address</span></dt>
+                <dd>
+                    <span>{{application.applicant_address}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.course">Course</span></dt>
+                <dd>
+                    <span>{{application.course}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.institute">Institute</span></dt>
+                <dd>
+                    <span>{{application.institute}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.speciality">Speciality</span></dt>
+                <dd>
+                    <span>{{application.speciality}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.course_doc">Course Doc</span></dt>
+                <dd>
+                    <span>{{application.course_doc}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.first_preference">First Preference</span></dt>
+                <dd>
+                    <span>{{application.first_preference}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.second_preference">Second Preference</span></dt>
+                <dd>
+                    <span>{{application.second_preference}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.third_preference">Third Preference</span></dt>
+                <dd>
+                    <span>{{application.third_preference}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.entryby">Entryby</span></dt>
+                <dd>
+                    <span>{{application.entryby}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.entry_date">Entry Date</span></dt>
+                <dd>
+                    <span>{{application.entry_date}}</span>
+                </dd>
+                <dt><span jhiTranslate="seatAllotmentApp.application.status">Status</span></dt>
+                <dd>
+                    <span>{{application.status}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/application', application.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

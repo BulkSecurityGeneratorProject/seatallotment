@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-application-log-heading" jhiTranslate="seatAllotmentApp.applicationLog.home.createOrEditLabel">Create or edit a Application Log</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.applicationLog.application_no" for="field_application_no">Application No</label>
+                    <input type="text" class="form-control" name="application_no" id="field_application_no"
+                           formControlName="application_no"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.applicationLog.action" for="field_action">Action</label>
+                    <input type="text" class="form-control" name="action" id="field_action"
+                           formControlName="action"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.applicationLog.action_by" for="field_action_by">Action By</label>
+                    <input type="text" class="form-control" name="action_by" id="field_action_by"
+                           formControlName="action_by"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.applicationLog.action_date" for="field_action_date">Action Date</label>
+                    <div class="d-flex">
+                        <input id="field_action_date" type="datetime-local" class="form-control" name="action_date" formControlName="action_date" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

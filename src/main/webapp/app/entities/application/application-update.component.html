@@ -1,0 +1,106 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-application-heading" jhiTranslate="seatAllotmentApp.application.home.createOrEditLabel">Create or edit a Application</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.application_no" for="field_application_no">Application No</label>
+                    <input type="text" class="form-control" name="application_no" id="field_application_no"
+                           formControlName="application_no"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.applicant_name" for="field_applicant_name">Applicant Name</label>
+                    <input type="text" class="form-control" name="applicant_name" id="field_applicant_name"
+                           formControlName="applicant_name"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.applicant_email" for="field_applicant_email">Applicant Email</label>
+                    <input type="text" class="form-control" name="applicant_email" id="field_applicant_email"
+                           formControlName="applicant_email"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.applicant_mobile" for="field_applicant_mobile">Applicant Mobile</label>
+                    <input type="text" class="form-control" name="applicant_mobile" id="field_applicant_mobile"
+                           formControlName="applicant_mobile"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.applicant_dob" for="field_applicant_dob">Applicant Dob</label>
+                    <div class="d-flex">
+                        <input id="field_applicant_dob" type="datetime-local" class="form-control" name="applicant_dob" formControlName="applicant_dob" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.applicant_address" for="field_applicant_address">Applicant Address</label>
+                    <input type="text" class="form-control" name="applicant_address" id="field_applicant_address"
+                           formControlName="applicant_address"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.course" for="field_course">Course</label>
+                    <input type="text" class="form-control" name="course" id="field_course"
+                           formControlName="course"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.institute" for="field_institute">Institute</label>
+                    <input type="text" class="form-control" name="institute" id="field_institute"
+                           formControlName="institute"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.speciality" for="field_speciality">Speciality</label>
+                    <input type="text" class="form-control" name="speciality" id="field_speciality"
+                           formControlName="speciality"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.course_doc" for="field_course_doc">Course Doc</label>
+                    <input type="text" class="form-control" name="course_doc" id="field_course_doc"
+                           formControlName="course_doc"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.first_preference" for="field_first_preference">First Preference</label>
+                    <input type="text" class="form-control" name="first_preference" id="field_first_preference"
+                           formControlName="first_preference"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.second_preference" for="field_second_preference">Second Preference</label>
+                    <input type="text" class="form-control" name="second_preference" id="field_second_preference"
+                           formControlName="second_preference"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.third_preference" for="field_third_preference">Third Preference</label>
+                    <input type="text" class="form-control" name="third_preference" id="field_third_preference"
+                           formControlName="third_preference"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.entryby" for="field_entryby">Entryby</label>
+                    <input type="text" class="form-control" name="entryby" id="field_entryby"
+                           formControlName="entryby"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.entry_date" for="field_entry_date">Entry Date</label>
+                    <div class="d-flex">
+                        <input id="field_entry_date" type="datetime-local" class="form-control" name="entry_date" formControlName="entry_date" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="seatAllotmentApp.application.status" for="field_status">Status</label>
+                    <input type="text" class="form-control" name="status" id="field_status"
+                           formControlName="status"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+{
+  "seatAllotmentApp": {
+    "application": {
+      "home": {
+        "title": "Applications",
+        "createLabel": "Create a new Application",
+        "createOrEditLabel": "Create or edit a Application",
+        "notFound": "No Application found"
+      },
+      "created": "A new Application is created with identifier {{ param }}",
+      "updated": "A Application is updated with identifier {{ param }}",
+      "deleted": "A Application is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Application {{ id }}?"
+      },
+      "detail": {
+        "title": "Application"
+      },
+      "application_no": "Application No",
+      "applicant_name": "Applicant Name",
+      "applicant_email": "Applicant Email",
+      "applicant_mobile": "Applicant Mobile",
+      "applicant_dob": "Applicant Dob",
+      "applicant_address": "Applicant Address",
+      "course": "Course",
+      "institute": "Institute",
+      "speciality": "Speciality",
+      "course_doc": "Course Doc",
+      "first_preference": "First Preference",
+      "second_preference": "Second Preference",
+      "third_preference": "Third Preference",
+      "entryby": "Entryby",
+      "entry_date": "Entry Date",
+      "status": "Status"
+    }
+  }
+}
